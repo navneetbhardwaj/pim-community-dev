@@ -4,7 +4,8 @@ imports:
 
 framework:
     test: ~
-    csrf_protection: true
+    profiler:
+        collect: false
 
 doctrine:
     orm:
@@ -13,24 +14,8 @@ doctrine:
                 metadata_cache_driver: array
                 query_cache_driver:    array
 
-monolog:
-    handlers:
-        main:
-            type:         fingers_crossed
-            action_level: warning
-            handler:      nested
-        nested:
-            type: stream
-            path: '%kernel.logs_dir%/%kernel.environment%.log'
-            level: info
-        console:
-            type:  console
-
 swiftmailer:
     disable_delivery: true
-
-assetic:
-    use_controller: false
 
 pim_import_export:
     record_mails: true
