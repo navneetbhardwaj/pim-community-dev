@@ -296,7 +296,7 @@ category:
     edit:     edit category
     suggest selection: Please select a category on the left
     or: or
-    create new: Create a new category
+    create new: Create a new category tree
 
 tree:
     title:    tree
